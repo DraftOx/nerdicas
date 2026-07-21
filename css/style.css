@@ -84,3 +84,59 @@ body {
 .navegacao-principal a:hover {
   opacity: 0.7; /* Efeito simples ao passar o mouse */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- RODAPÉ --- */
+.rodape-nerdicas {
+  /* Usa a mesma linha do header para manter a unidade visual */
+  border-top: 2px solid var(--cor-linha); 
+  text-align: center;
+  padding: 24px 20px;
+  margin-top: 60px; /* Empurra o rodapé para baixo, dando espaço ao conteúdo */
+}
+
+.rodape-nerdicas p {
+  margin: 0;
+  color: #8a8d9e; /* Cor neutra para o texto geral */
+  font-size: 14px;
+}
+
+/* Aplicando o gradiente apenas no nome do projeto dentro do rodapé */
+.rodape-nerdicas p span {
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--ciano), var(--magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
