@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nerdicas - Home</title>
+  <!-- Configurações básicas de caracteres e responsividade -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdicas</title>
+  <!-- Tag responsável por mostrar a logo na aba do navegador -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <!-- Ligação com o arquivo CSS (deve ficar sempre no <head>) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Ligação com o arquivo JavaScript -->
+  <!-- O atributo 'defer' garante que o script só execute após o HTML estar pronto -->
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-    
+  <!-- O Header que criamos entra aqui dentro do body -->
+  <header class="cabecalho-nerdicas">
+        <div class="topo-container">
+      <button class="menu-hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+      </button>
+        <div class="logo-container">
+        <!-- Aqui a imagem da logo é puxada da pasta assets -->
+        <img src="assets/images/nome.png" alt="Logo Nerdicas" class="logo">
+      </div>
+    <div class="espacador"></div>
+    </div>
+    <nav class="navegacao-principal">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li class="separador">|</li>
+        <li><a href="#">Noticias</a></li>
+        <li class="separador">|</li>
+        <li><a href="#">Promoções</a></li>
+        <li class="separador">|</li>
+        <li><a href="#">Reviews</a></li>
+        <li class="separador">|</li>
+        <li><a href="#">Especiais</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- O restante do site (conteúdo principal, rodapé) entrará aqui depois -->
 </body>
 </html>

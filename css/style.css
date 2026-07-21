@@ -1,0 +1,86 @@
+/* Definindo as cores principais baseadas no seu design */
+:root {
+  --bg-escuro: #0a0b10;
+  --ciano: #00d2ff;
+  --magenta: #ff00ff;
+  --cor-linha: #1a1b26;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-escuro);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecalho-nerdicas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* --- TOPO (Botão e Logo) --- */
+.topo-container {
+  display: grid;
+  /* Cria 3 colunas: as das pontas ocupam o espaço restante, a do meio ajusta ao conteúdo */
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.menu-hamburguer {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Espaço entre as linhas do botão */
+  width: max-content;
+}
+
+.menu-hamburguer span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  /* Remove o background-color branco e adiciona o gradiente usando as variáveis */
+  background: linear-gradient(90deg, var(--ciano), var(--magenta));
+  /* Opcional: deixa as pontinhas das linhas levemente arredondadas */
+  border-radius: 2px;
+}
+
+.logo {
+  max-height: 55px; /* Ajuste conforme necessário */
+}
+
+/* --- NAVEGAÇÃO (Links) --- */
+.navegacao-principal {
+  border-top: 2px solid var(--cor-linha);
+  border-bottom: 2px solid var(--cor-linha);
+  margin: 0 40px; /* Alinha com o padding do topo */
+  padding: 12px 0;
+}
+
+.navegacao-principal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espaçamento entre links e os separadores */
+}
+
+/* Aplicando o efeito de gradiente no texto */
+.navegacao-principal a, .separador {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  background: linear-gradient(90deg, var(--ciano), var(--magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.3s ease;
+}
+
+.navegacao-principal a:hover {
+  opacity: 0.7; /* Efeito simples ao passar o mouse */
+}
