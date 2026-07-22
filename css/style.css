@@ -1,50 +1,52 @@
 /* Definindo as cores principais baseadas no seu design */
 :root {
-  --bg-escuro: #0a0b10;
-  --ciano: #00d2ff;
-  --magenta: #ff00ff;
-  --cor-linha: #1a1b26;
+  --bg-escuro: #0a0b10; /* Cor de fundo escura para o site */
+  --ciano: #00d2ff; /* Cor ciano para o gradiente */
+  --magenta: #ff00ff; /* Cor magenta para o gradiente */
+  --cor-linha: #1a1b26; /* Cor para as linhas de separação, mantendo a consistência visual */
 }
 
 body {
-  margin: 0;
-  background-color: var(--bg-escuro);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; /* Remove a margem padrão do navegador */
+  background-color: var(--bg-escuro); /* Define a cor de fundo do site */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte limpa e moderna */
 }
 
 .cabecalho-nerdicas {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: flex; /* Usa flexbox para organizar os elementos do cabeçalho */
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  width: 100%; /* Garante que o cabeçalho ocupe toda a largura da tela */
 }
 
 /* --- TOPO (Botão e Logo) --- */
 .topo-container {
-  display: grid;
+  display: grid; /* Usa grid para organizar o botão e a logo */
   /* Cria 3 colunas: as das pontas ocupam o espaço restante, a do meio ajusta ao conteúdo */
-  grid-template-columns: 1fr auto 1fr; 
-  align-items: center;
-  padding: 20px 40px;
+  grid-template-columns: 1fr auto 1fr; /* Mantém a logo centralizada */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  padding: 20px 40px; /* Espaçamento interno para o topo */
 }
 
 .menu-hamburguer {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+  background: transparent; /* Mantém o fundo do botão transparente */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  display: flex; /* Usa flexbox para organizar as linhas do botão */
+  flex-direction: column; /* Organiza as linhas do botão verticalmente */
   gap: 6px; /* Espaço entre as linhas do botão */
-  width: max-content;
+  width: max-content; /* Ajusta a largura do botão ao conteúdo */
 }
 
-.menu-hamburguer span {
-  display: block;
-  width: 30px;
-  height: 2px;
+.menu-hamburguer span { /* Cada linha do botão é representada por um span */
+  display: block; /* Garante que cada linha seja um bloco separado */
+  width: 30px; /* Largura da linha do botão */
+  height: 2px; /* Altura da linha do botão */
+
   /* Remove o background-color branco e adiciona o gradiente usando as variáveis */
-  background: linear-gradient(90deg, var(--ciano), var(--magenta));
+  background: linear-gradient(90deg, var(--ciano), var(--magenta)); /* Aplica o gradiente horizontalmente */
+  
   /* Opcional: deixa as pontinhas das linhas levemente arredondadas */
-  border-radius: 2px;
+  border-radius: 2px; /* Ajuste conforme necessário */
 }
 
 .logo {
@@ -53,32 +55,32 @@ body {
 
 /* --- NAVEGAÇÃO (Links) --- */
 .navegacao-principal {
-  border-top: 2px solid var(--cor-linha);
-  border-bottom: 2px solid var(--cor-linha);
+  border-top: 2px solid var(--cor-linha); /* Mantém a consistência visual com o topo */
+  border-bottom: 2px solid var(--cor-linha); /* Mantém a consistência visual com o topo */
   margin: 0 40px; /* Alinha com o padding do topo */
-  padding: 12px 0;
+  padding: 12px 0; /* Espaçamento vertical para os links */
 }
 
 .navegacao-principal ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  list-style: none; /* Remove os marcadores padrão da lista */
+  margin: 0; /* Remove a margem padrão da lista */
+  padding: 0; /* Remove o padding padrão da lista */
+  display: flex; /* Usa flexbox para organizar os links horizontalmente */
+  justify-content: center; /* Centraliza os links horizontalmente */
+  align-items: center; /* Alinha os links verticalmente no centro */
   gap: 15px; /* Espaçamento entre links e os separadores */
 }
 
 /* Aplicando o efeito de gradiente no texto */
 .navegacao-principal a, .separador {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  background: linear-gradient(90deg, var(--ciano), var(--magenta));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  transition: opacity 0.3s ease;
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  font-weight: 500; /* Define uma espessura média para o texto */
+  font-size: 16px; /* Define o tamanho da fonte para os links */
+  background: linear-gradient(90deg, var(--ciano), var(--magenta)); /* Aplica o gradiente horizontalmente */
+  -webkit-background-clip: text; /* Necessário para que o gradiente seja aplicado apenas ao texto */
+  -webkit-text-fill-color: transparent; /* Necessário para que o gradiente seja aplicado apenas ao texto */
+  background-clip: text; /* Necessário para que o gradiente seja aplicado apenas ao texto */
+  transition: opacity 0.3s ease; /* Transição suave para o efeito de hover */
 }
 
 .navegacao-principal a:hover {
@@ -120,23 +122,23 @@ body {
 /* --- RODAPÉ --- */
 .rodape-nerdicas {
   /* Usa a mesma linha do header para manter a unidade visual */
-  border-top: 2px solid var(--cor-linha); 
-  text-align: center;
-  padding: 24px 20px;
+  border-top: 2px solid var(--cor-linha); /* Mantém a consistência visual com o topo */ 
+  text-align: center; /* Centraliza o conteúdo do rodapé */
+  padding: 24px 20px; /* Espaçamento interno para o rodapé */
   margin-top: 60px; /* Empurra o rodapé para baixo, dando espaço ao conteúdo */
 }
 
 .rodape-nerdicas p {
-  margin: 0;
+  margin: 0; /* Remove a margem padrão do parágrafo */
   color: #8a8d9e; /* Cor neutra para o texto geral */
-  font-size: 14px;
+  font-size: 14px; /* Tamanho de fonte menor para o rodapé */
 }
 
 /* Aplicando o gradiente apenas no nome do projeto dentro do rodapé */
 .rodape-nerdicas p span {
-  font-weight: 700;
-  background: linear-gradient(90deg, var(--ciano), var(--magenta));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700; /* Destaca o nome do projeto com uma fonte mais pesada */
+  background: linear-gradient(90deg, var(--ciano), var(--magenta)); /* Aplica o gradiente horizontalmente */
+  -webkit-background-clip: text; /* Necessário para que o gradiente seja aplicado apenas ao texto */
+  -webkit-text-fill-color: transparent; /* Necessário para que o gradiente seja aplicado apenas ao texto */
+  background-clip: text; /* Necessário para que o gradiente seja aplicado apenas ao texto */
 }
